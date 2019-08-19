@@ -6,6 +6,7 @@
     group: 'general'
     icon: icon-map
     position: 420
+    reloadIfChanged: true
     inspector:
       groups:
         map:
