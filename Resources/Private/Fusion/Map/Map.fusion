@@ -1,0 +1,5 @@
+prototype(Sitegeist.GoogleMaps:Map) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Sitegeist.GoogleMaps/Private/Fusion/Map/Map.html'
+    id = ${String.split(node.identifier,'-')[0]}
+    height = ${q(node).property('height') ? q(node).property('height') : '600'}
+}

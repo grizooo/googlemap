@@ -1,0 +1,13 @@
+{
+    "description": "A package to manage Google Maps with pins",
+    "type": "neos-plugin",
+    "name": "sitegeist/googlemaps",
+    "require": {
+        "neos/flow": "*"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Sitegeist.GoogleMaps"
+        }
+    }
+}

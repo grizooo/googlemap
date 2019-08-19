@@ -1,0 +1,21 @@
+'Sitegeist.GoogleMaps:Map':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Google Map'
+    group: 'general'
+    icon: icon-map
+    position: 420
+    inspector:
+      groups:
+        map:
+          label: 'Map'
+          position: 10
+  properties:
+    height:
+      type: integer
+      defaultValue: '600'
+      ui:
+        label: 'Map höhe'
+        inspector:
+          group: 'map'

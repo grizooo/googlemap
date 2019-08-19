@@ -1,0 +1,39 @@
+<script>
+	var map = [];
+	var pinUrl = '{pinUrl}';
+	function initMap() {
+        var maps = document.getElementsByClassName('google-map');
+        var index = 1;
+		Array.prototype.forEach.call(maps, function (element) {
+			var id = element.getAttribute('id');
+			map[index] = new google.maps.Map(document.getElementById(id), {
+				center: {lat: 51.165691, lng: 10.451526},
+				zoom: 6,
+				zoomControl: true,
+				mapTypeControl: false,
+				scaleControl: false,
+				streetViewControl: false,
+				rotateControl: false,
+				fullscreenControl: false
+			});
+			var pins = document.querySelectorAll('[data-for-map="'+index+'"]');
+			Array.prototype.forEach.call(pins, function (pin) {
+				var lat = eval(pin.querySelector('.google-map__lat').innerHTML);
+				var lng = eval(pin.querySelector('.google-map__lng').innerHTML);
+				var title = pin.querySelector('.google-map__title').innerHTML;
+				var pinPosition = {lat: lat,lng: lng};
+				var marker = new google.maps.Marker({
+					position: pinPosition,
+					map: map[index],
+					title: title,
+					icon: {
+						url: pinUrl
+					}
+				});
+			});
+
+			index++;
+		});
+	}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={apiKey}&callback=initMap" async defer></script>

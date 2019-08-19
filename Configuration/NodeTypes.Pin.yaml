@@ -1,0 +1,63 @@
+'Sitegeist.GoogleMaps:Pin':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    inlineEditable: true
+    label: 'Google Map Pin'
+    group: 'general'
+    icon: icon-map
+    position: 420
+    inspector:
+      groups:
+        map:
+          label: 'Map'
+          position: 10
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        inspector:
+          group: 'map'
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Bitte Titel eingeben'
+            autoparagraph: false
+            linking: ~
+            formatting: ~
+    lat:
+      type: string
+      defaultValue: '53.551086'
+      ui:
+        label: 'Lat'
+        inspector:
+          group: 'map'
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: '53.551086'
+            autoparagraph: false
+            linking: ~
+            formatting: ~
+    lng:
+      type: string
+      defaultValue: '9.993682'
+      ui:
+        label: 'Lng'
+        inspector:
+          group: 'map'
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: '9.993682'
+            autoparagraph: false
+            linking: ~
+            formatting: ~
+    forMap:
+      type: integer
+      defaultValue: 1
+      ui:
+        label: 'Pin für welche Map'
+        inspector:
+          group: 'map'

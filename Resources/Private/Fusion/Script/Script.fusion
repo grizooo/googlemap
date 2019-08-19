@@ -1,0 +1,11 @@
+prototype(Neos.Neos:Page)  {
+    googleMapScript = Neos.Fusion:Template {
+        apiKey = ${Configuration.setting('Sitegeist.GoogleMaps.ApiKey')}
+        pinUrl = Neos.Fusion:ResourceUri {
+            path = 'resource://Sitegeist.GoogleMaps/Public/Images/Pin.png'
+        }
+        templatePath = 'resource://Sitegeist.GoogleMaps/Private/Fusion/Script/Script.html'
+        @if.mapJsShoudLoad = ${q(documentNode).find('[instanceof Sitegeist.GoogleMaps:Map]').get(0) && Configuration.setting('Sitegeist.GoogleMaps.LoadMapJs')}
+        @position = 'before closingBodyTag'
+    }
+}

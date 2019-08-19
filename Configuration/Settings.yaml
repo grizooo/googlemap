@@ -1,0 +1,10 @@
+Sitegeist:
+  GoogleMaps:
+    ApiKey:
+    LoadMapJs: true
+
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Sitegeist.GoogleMaps: true

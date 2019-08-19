@@ -1,0 +1,36 @@
+prototype(Sitegeist.GoogleMaps:Pin) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Sitegeist.GoogleMaps/Private/Fusion/Pin/Pin.html'
+
+    forMap = ${q(node).property('forMap') ? q(node).property('forMap') : 1}
+
+    titleElement = Neos.Fusion:Tag {
+        tagName = 'div'
+        attributes.class = 'google-map__title'
+        content = ${q(node).property('title')}
+        @process.contentElementEditable = Neos.Neos:ContentElementEditable {
+            @if.isLive = ${node.context.isLive ? false : true}
+            property = 'title'
+            tag = 'div'
+        }
+    }
+    latElement = Neos.Fusion:Tag {
+        tagName = 'span'
+        attributes.class = 'google-map__lat'
+        content = ${q(node).property('lat')}
+        @process.contentElementEditable = Neos.Neos:ContentElementEditable {
+            @if.isLive = ${node.context.isLive ? false : true}
+            property = 'lat'
+            tag = 'span'
+        }
+    }
+    lngElement = Neos.Fusion:Tag {
+        tagName = 'span'
+        attributes.class = 'google-map__lng'
+        content = ${q(node).property('lng')}
+        @process.contentElementEditable = Neos.Neos:ContentElementEditable {
+            @if.isLive = ${node.context.isLive ? false : true}
+            property = 'lng'
+            tag = 'span'
+        }
+    }
+}
