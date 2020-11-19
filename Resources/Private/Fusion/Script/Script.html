@@ -6,9 +6,12 @@
         var index = 1;
 		Array.prototype.forEach.call(maps, function (element) {
 			var id = element.getAttribute('id');
+			var lat = parseFloat(element.getAttribute('data-lat'));
+			var lng = parseFloat(element.getAttribute('data-lng'));
+			var zoom = parseInt(element.getAttribute('data-zoom'));
 			map[index] = new google.maps.Map(document.getElementById(id), {
-				center: {lat: 51.165691, lng: 10.451526},
-				zoom: 6,
+				center: {lat: lat, lng: lng},
+				zoom: zoom,
 				zoomControl: true,
 				mapTypeControl: false,
 				scaleControl: false,

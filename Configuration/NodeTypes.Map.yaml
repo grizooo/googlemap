@@ -20,3 +20,24 @@
         label: 'Map höhe'
         inspector:
           group: 'map'
+    lat:
+      type: string
+      defaultValue: '53.551086'
+      ui:
+        label: 'Lat'
+        inspector:
+          group: 'map'
+    lng:
+      type: string
+      defaultValue: '9.993682'
+      ui:
+        label: 'Lng'
+        inspector:
+          group: 'map'
+    zoom:
+      type: string
+      defaultValue: '6'
+      ui:
+        label: 'Zoom'
+        inspector:
+          group: 'map'

@@ -5,7 +5,7 @@
     inlineEditable: true
     label: 'Google Map Pin'
     group: 'general'
-    icon: icon-map
+    icon: icon-map-pin
     position: 420
     inspector:
       groups:
